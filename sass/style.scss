@@ -11,3 +11,52 @@ body {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+// HEADER 
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    border-left: 8px solid #6393ad;
+    border-bottom: 8px solid #6393ad;
+    padding: 25px;
+}
+
+.header__logo {
+    display: inline-block;
+    width: 45%;
+}
+
+.logo__title {
+    font-size: 45px;
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+}
+
+.logo__subtitle {
+    font-family: 'Sen', sans-serif;
+    font-size: 25px;
+    padding: 8px 0 0 4px;
+}
+
+.header__navigation {
+    display: inline-block;
+    width: 50%;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__element {
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 0 10px;
+    font-size: 25px;
+    border-bottom: 5px solid white;
+
+    &:hover {
+        border-bottom: 5px solid #6393ad;
+    }
+}
