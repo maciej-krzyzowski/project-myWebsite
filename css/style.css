@@ -635,6 +635,69 @@ body {
   box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
 }
 
+.project {
+  display: inline-block;
+  margin: 40px 10px;
+  width: 30%;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.project:hover .project__img--wrapper::before {
+  display: block;
+}
+
+.project:hover .project__button {
+  display: flex;
+}
+
+.project__img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project__img--wrapper {
+  position: relative;
+  border: 3px solid #91a0bb;
+}
+
+.project__img--wrapper::before {
+  content: '';
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.project__button {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.project__btn {
+  background-color: #91a0bb;
+  border-radius: 3px;
+  border-color: #91a0bb;
+  padding: 10px 15px;
+  margin: 15px;
+}
+
+.project__paragraph {
+  width: 90%;
+  margin: 40px auto 0;
+}
+
 #contact {
   display: none;
 }
