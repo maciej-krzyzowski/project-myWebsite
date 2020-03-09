@@ -1,7 +1,5 @@
-@import 'reset';
-@import 'global';
-@import 'aboutMe';
-@import 'project';
+@import 'reset.scss';
+@import 'global.scss';
 
 // HEADER 
 
@@ -13,10 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-left: 8px solid $color-gray;
-    border-bottom: 8px solid $color-gray;
     padding: 25px;
-    box-shadow: -17px 17px 10px -12px rgba(17,17,17,.3);
+    background-color: $color-background;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray;
+        z-index: -1;
+        top: 10px;
+        left: -10px;
+        box-shadow: -17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
 }
 
 .header__logo {
@@ -76,11 +86,242 @@
     border-bottom: 5px solid $color-background;
 
     &:hover {
-        border-bottom: 5px solid $color-gray;
+        border-bottom: 5px solid $color-hover;
     }
 
     &--active {
-        border-bottom: 5px solid $color-gray;
+        border-bottom: 5px solid $color-hover;
+    }
+}
+
+
+// HERO
+
+// #aboutMe {
+//     display: none;
+// }
+
+.hero__wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 75px 0;
+}
+
+.hero__image {
+    display: inline-block;
+    width: 49%;
+}
+
+.hero__img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero__text {
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    top: 0;
+    background-color: $color-background;
+    
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray;
+        top: 10px;
+        left: 10px;
+        z-index: -1;
+        box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+}
+
+.hero__title {
+    & > span {
+        color: $color-gray;
+
+        &:first-child {
+            font-size: 55px;
+        }
+    }
+}
+
+.hero__paragraph {
+    margin: 40px 20px 20px 0;
+    
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+// ABOUT_ME
+
+.aboutMe__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+    border-top: 1px solid $color-gray;
+}
+
+.aboutMe__header {
+    display: inline-block;
+    width: 45%;
+    margin: 0 auto;
+    background-color: $color-background;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        background-color: $color-gray;
+        z-index: -1;
+    }
+}
+
+.aboutMe__header--interests, .aboutMe__header--education {
+    &::before {
+        top: -10px;
+        left: -10px;
+        box-shadow: -17px -17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+}
+
+.aboutMe__header--qualities, .aboutMe__header--job {
+    &::before {
+        right: -10px;
+        bottom: -10px;
+        box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+}
+
+.aboutMe__title {
+    margin: 20px 0 0 20px
+}
+
+.aboutMe__paragraph {
+    margin: 40px 20px 20px 20px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.job__paragraph {
+    margin-top: 20px
+}
+
+// PROJECT 
+
+#project {
+    display: none;
+}
+
+.projects {
+    margin: 150px 0;
+}
+
+.project__title {
+    padding: 40px 0;
+
+    & > span {
+        color: $color-gray;
+        font-size: 55px;
+    }
+}
+
+.project__wrapper {
+    text-align: center;
+    margin: 150px 0;
+    background-color: $color-background;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        background-color: $color-gray;
+        z-index: -1;
+    }
+
+    &::before {
+        top: -10px;
+        left: -10px;
+        box-shadow: -17px -17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+
+    &::after {
+        right: -10px;
+        bottom: -10px;
+        box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+}
+
+// CONTACT 
+
+#contact {
+    display: none;
+}
+
+.contact {
+    margin: 75px 0;
+}
+
+.contact__wrapper {
+    padding: 75px 0;
+    text-align: center;
+    position: relative;
+    background-color: $color-background;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        background-color: $color-gray;
+        z-index: -1;
+    }
+
+    &::before {
+        top: -10px;
+        left: -10px;
+        box-shadow: -17px -17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+
+    &::after {
+        right: -10px;
+        bottom: -10px;
+        box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+    }
+}
+
+.contact__list {
+    margin-top: 75px;
+}
+
+.contact__element {
+    display: inline-block;
+    width: 49%;
+    margin: 40px auto;
+}
+
+.contact__link {
+    font-size: 120px;
+    color: $color-gray;
+
+    & > p {
+        padding-top: 25px;
+        font-size: 20px;
+        color: $color-black;
+    }
+
+    &:hover {
+        color: $color-hover;
     }
 }
 

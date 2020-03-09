@@ -25,6 +25,10 @@ body {
   margin: 0 auto;
 }
 
+#aboutMe {
+  display: none;
+}
+
 .hero__wrapper {
   display: flex;
   align-items: flex-start;

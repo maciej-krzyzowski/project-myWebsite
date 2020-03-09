@@ -1,0 +1,86 @@
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  background-color: #EBEBEB;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.contact {
+  margin: 75px 0;
+}
+
+.contact__wrapper {
+  padding: 75px 0;
+  text-align: center;
+  position: relative;
+  background-color: #EBEBEB;
+}
+
+.contact__wrapper::before, .contact__wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background-color: #91a0bb;
+  z-index: -1;
+}
+
+.contact__wrapper::before {
+  top: -10px;
+  left: -10px;
+  box-shadow: -17px -17px 10px -12px rgba(17, 17, 17, 0.3);
+}
+
+.contact__wrapper::after {
+  right: -10px;
+  bottom: -10px;
+  box-shadow: 17px 17px 10px -12px rgba(17, 17, 17, 0.3);
+}
+
+.contact__list {
+  margin-top: 75px;
+}
+
+.contact__element {
+  display: inline-block;
+  width: 49%;
+  margin: 40px auto;
+}
+
+.contact__link {
+  font-size: 120px;
+  color: #91a0bb;
+}
+
+.contact__link > p {
+  padding-top: 25px;
+  font-size: 20px;
+  color: #000;
+}
+
+.contact__link:hover {
+  color: #204f68;
+}
+
+/*# sourceMappingURL=contact.css.map */
