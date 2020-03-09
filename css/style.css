@@ -422,10 +422,6 @@ body {
   margin: 0 auto;
 }
 
-#aboutMe {
-  display: none;
-}
-
 .hero__wrapper {
   display: flex;
   align-items: flex-start;
@@ -554,6 +550,10 @@ body {
   width: 90%;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+#project {
+  display: none;
 }
 
 .projects {

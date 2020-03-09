@@ -25,6 +25,10 @@ body {
   margin: 0 auto;
 }
 
+#project {
+  display: none;
+}
+
 .projects {
   margin: 150px 0;
 }
