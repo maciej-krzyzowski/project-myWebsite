@@ -7,6 +7,7 @@
     <title>Maciej Krzyzowski</title>
     <script src="https://kit.fontawesome.com/c5afe1f91e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Sen:400,700&display=swap" rel="stylesheet">
+    <link href="css/hamburger.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -43,6 +44,11 @@
                         </ul>
                     </div>
                     <nav class="header__menu">
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                         <ul class="menu__list">
                             <li class="menu__element">
                                 <a href="#sectionAboutMe" class="menu__link activeLink">O MNIE</a>
@@ -153,7 +159,7 @@
         <div class="container">
             <div class="project__wrapper">
                 <h1 class="project__title"><span>P</span>ortfolio</h1>
-                <div>
+                <div class="project__row">
                     <div class="project">
                         <div class="project__img--wrapper">
                             <div class="project__button">
@@ -206,7 +212,7 @@
             </div>
             <div class="project__wrapper">
                 <h1 class="project__title"><span>W</span>ybrane projekty realizowane w trakcie nauki</h1>
-                <div>
+                <div class="project__row">
                     <div class="project">
                         <div class="project__img--wrapper">
                             <div class="project__button">
@@ -317,13 +323,13 @@
                 <div class="footer__menu">
                     <ul>
                         <li class="footer__element">
-                            <a href="" class="footer__link">O MNIE</a>
+                            <a href="#sectionAboutMe" class="footer__link footer__link--menu">O MNIE</a>
                         </li>
                         <li class="footer__element">
-                            <a href="" class="footer__link">PROJEKTY</a>
+                            <a href="#sectionProject" class="footer__link footer__link--menu">PROJEKTY</a>
                         </li>
                         <li class="footer__element">
-                            <a href="" class="footer__link">KONTAKT</a>
+                            <a href="#sectionContact" class="footer__link footer__link--menu">KONTAKT</a>
                         </li>
                         <li class="footer__element">
                             <a href="https://www.linkedin.com/in/maciej-krzy%C5%BCowski/" target="_blank"

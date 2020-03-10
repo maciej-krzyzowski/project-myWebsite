@@ -3,6 +3,10 @@ h1 {
   font-weight: bold;
 }
 
+h1 > span:first-child {
+  font-size: 55px;
+}
+
 h2 {
   font-size: 25px;
   font-weight: bold;
@@ -11,6 +15,10 @@ h2 {
 h3 {
   font-size: 20px;
   font-weight: bold;
+}
+
+p {
+  font-size: 20px;
 }
 
 body {
@@ -23,6 +31,42 @@ body {
   width: 90%;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+  h1 {
+    font-size: 35px;
+  }
+  h1 > span:first-child {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 32px;
+  }
+  h1 > span:first-child {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */

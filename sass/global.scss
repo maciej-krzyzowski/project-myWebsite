@@ -7,6 +7,13 @@ $color-gray: rgb(145, 160, 187);
 h1 {
     font-size: 45px;
     font-weight: bold;
+
+    & > span {
+
+        &:first-child {
+         font-size: 55px;
+        }
+    }
 }
 
 h2 {
@@ -19,6 +26,10 @@ h3 {
     font-weight: bold;
 }
 
+p {
+    font-size: 20px;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     color: $color-black;
@@ -29,4 +40,54 @@ body {
     width: 90%;
     max-width: 1140px;
     margin: 0 auto;
+}
+
+@media (max-width: 1140px) {
+    h1 {
+        font-size: 35px;
+
+        & > span {
+
+            &:first-child {
+             font-size: 45px;
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 32px;
+
+        & > span {
+
+            &:first-child {
+             font-size: 45px;
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }

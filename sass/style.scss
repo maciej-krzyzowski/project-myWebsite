@@ -78,6 +78,10 @@
     justify-content: flex-end;
 }
 
+.hamburger {
+    display: none;
+}
+
 .menu__element {
     display: inline-block;
     margin: 15px;
@@ -203,8 +207,7 @@
 }
 
 .aboutMe__paragraph {
-    margin: 40px 20px 20px 20px;
-    font-size: 20px;
+    margin: 40px 20px 20px;
     line-height: 1.2;
 }
 
@@ -257,6 +260,10 @@
     }
 }
 
+.project__row {
+    display: flex;
+    align-items: flex-start;
+}
 
 .project {
     display: inline-block;
@@ -366,7 +373,7 @@
 }
 
 .contact__list {
-    margin-top: 75px;
+    margin-top: 40px;
 }
 
 .contact__element {
@@ -381,7 +388,6 @@
 
     & > p {
         padding-top: 25px;
-        font-size: 20px;
         color: $color-black;
     }
 
@@ -422,6 +428,7 @@
 .footer__element {
     display: inline-block;
     margin: 8px;
+    border-color: $color-gray;
 
     &:hover .footer__link {
         color: $color-hover;
@@ -441,4 +448,175 @@
 
 .activeLink {
     border-bottom: 5px solid $color-hover;
+}
+
+@media (max-width: 1140px) {
+
+    // HEADER 
+
+    .logo__title {
+        font-size: 35px;
+    }
+
+    .logo__subtitle {
+        font-size: 20px;
+    }
+
+    .icon__link {
+        font-size: 20px;
+    }
+
+    .menu__element {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    // HERO 
+
+    .hero__title {
+
+        & > span {
+
+            &:first-child {
+             font-size: 45px;
+            }
+        }
+    }
+
+    .hero__paragraph {
+        font-size: 18px;
+    }
+
+    // CONTACT 
+
+    .contact__link {
+        font-size: 100px;
+    }
+
+    // FOOTER 
+
+    .footer__text {
+        font-size: 16px;
+    }
+
+    .footer__link {
+        font-size: 16px;
+    }
+
+    // ACTIVE 
+
+    .activeLink {
+        border-bottom: 5px solid $color-background;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .header__logo {
+        width: 70%;
+    }
+
+    .header__navigation {
+        width: 30%;
+    }
+
+    .icon__list {
+        margin: 0;
+    }
+
+    .hero__paragraph {
+        font-size: 16px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu__list {
+        display: none;
+        position: absolute;
+        top: 110px;
+        right: 0;
+        width: 100%;
+        background-color: $color-background;
+        text-align: center;
+    }
+
+    .menu__element {
+        display: block;
+        margin: 25px;
+    }
+
+
+    // ACTIVE 
+    
+    .activeMenuList {
+        display: block;
+    }
+
+    .activeLink {
+        border-bottom: 5px solid $color-background;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .hero__wrapper {
+        display: block;
+    }
+
+    .hero__image {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero__text {
+        display: block;
+        width: 100%;
+        margin: 75px auto 0;
+        padding-bottom: 20px;
+    }
+
+    .aboutMe__wrapper {
+        display: block;
+    }
+
+    .aboutMe__header {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .project__title {
+        padding: 40px 20px;
+    }
+
+    .project__row {
+        display: block;
+    }
+
+    .project {
+        width: 80%;
+    }
+}
+
+@media (max-width: 850px) {
+    .contact__element {
+        width: 80%;
+    }
+}
+
+@media (max-width: 620px) {
+    .header__logo {
+        width: 80%;
+    }
+
+    .header__navigation {
+        width: 20%;
+    }
+
+    .icon__list {
+        display: none;
+    }
 }
