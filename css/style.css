@@ -472,18 +472,21 @@ body {
 
 .menu__element {
   display: inline-block;
-  padding: 8px 10px;
-  margin: 0 10px;
+  margin: 15px;
   font-size: 25px;
+}
+
+.menu__link {
+  padding: 8px 10px;
   border-bottom: 5px solid #EBEBEB;
 }
 
-.menu__element:hover {
+.menu__link:hover {
   border-bottom: 5px solid #204f68;
 }
 
-.menu__element--active {
-  border-bottom: 5px solid #204f68;
+.sectionAboutMe {
+  display: none;
 }
 
 .hero__wrapper {
@@ -589,11 +592,8 @@ body {
   margin-top: 20px;
 }
 
-#project {
+.sectionProject {
   display: none;
-}
-
-.projects {
   margin: 150px 0;
 }
 
@@ -698,16 +698,21 @@ body {
   margin: 40px auto 0;
 }
 
-#contact {
+.sectionContact {
   display: none;
+  margin: 150px 0;
 }
 
-.contact {
-  margin: 75px 0;
+.contact__title {
+  padding: 40px 0;
+}
+
+.contact__title > span {
+  color: #91a0bb;
+  font-size: 55px;
 }
 
 .contact__wrapper {
-  padding: 75px 0;
   text-align: center;
   position: relative;
   background-color: #EBEBEB;
@@ -799,6 +804,14 @@ body {
 .footer__link {
   color: #fff;
   font-size: 20px;
+}
+
+.activeSection {
+  display: block;
+}
+
+.activeLink {
+  border-bottom: 5px solid #204f68;
 }
 
 /*# sourceMappingURL=style.css.map */

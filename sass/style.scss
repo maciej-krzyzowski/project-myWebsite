@@ -80,16 +80,15 @@
 
 .menu__element {
     display: inline-block;
-    padding: 8px 10px;
-    margin: 0 10px;
+    margin: 15px;
     font-size: 25px;
+}
+
+.menu__link {
+    padding: 8px 10px;
     border-bottom: 5px solid $color-background;
 
     &:hover {
-        border-bottom: 5px solid $color-hover;
-    }
-
-    &--active {
         border-bottom: 5px solid $color-hover;
     }
 }
@@ -97,9 +96,9 @@
 
 // HERO
 
-// #aboutMe {
-//     display: none;
-// }
+.sectionAboutMe {
+    display: none;
+}
 
 .hero__wrapper {
     display: flex;
@@ -215,11 +214,8 @@
 
 // PROJECT 
 
-#project {
+.sectionProject {
     display: none;
-}
-
-.projects {
     margin: 150px 0;
 }
 
@@ -327,16 +323,21 @@
 
 // CONTACT 
 
-#contact {
+.sectionContact {
     display: none;
+    margin: 150px 0;
 }
 
-.contact {
-    margin: 75px 0;
+.contact__title {
+    padding: 40px 0;
+
+    & > span {
+        color: $color-gray;
+        font-size: 55px;
+    }
 }
 
 .contact__wrapper {
-    padding: 75px 0;
     text-align: center;
     position: relative;
     background-color: $color-background;
@@ -430,4 +431,14 @@
 .footer__link {
     color: $color-white;
     font-size: 20px;
+}
+
+// ACTVIE 
+
+.activeSection {
+    display: block;
+}
+
+.activeLink {
+    border-bottom: 5px solid $color-hover;
 }
