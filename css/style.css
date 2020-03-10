@@ -922,9 +922,6 @@ body {
   .icon__list {
     margin: 0;
   }
-  .hero__paragraph {
-    font-size: 16px;
-  }
   .hamburger {
     display: block;
   }
@@ -940,6 +937,9 @@ body {
   .menu__element {
     display: block;
     margin: 25px;
+  }
+  .hero__paragraph {
+    font-size: 16px;
   }
   .project__paragraph > i {
     font-size: 28px;
@@ -1005,6 +1005,13 @@ body {
   }
   .icon__list {
     display: none;
+  }
+  .footer__wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer__text {
+    margin-top: 15px;
   }
 }
 
