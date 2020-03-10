@@ -236,6 +236,7 @@
     margin: 150px 0;
     background-color: $color-background;
     position: relative;
+    padding: 25px;
 
     &::before, &::after {
         content: '';
@@ -263,12 +264,14 @@
 .project__row {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .project {
     display: inline-block;
     margin: 40px 10px;
-    width: 30%;
+    width: 24%;
+    margin: 0 auto;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -326,6 +329,12 @@
 .project__paragraph {
     width: 90%;
     margin: 40px auto 0;
+    color: $color-hover;
+    
+    & > i {
+        font-size: 40px;
+        margin: 0 5px;
+    }
 }
 
 // CONTACT 
@@ -487,6 +496,14 @@
         font-size: 18px;
     }
 
+    // PROJECT 
+
+    .project__paragraph {
+        & > i {
+            font-size: 32px;
+        }
+    }
+
     // CONTACT 
 
     .contact__link {
@@ -547,6 +564,13 @@
         margin: 25px;
     }
 
+    // PROJECT 
+
+    .project__paragraph {
+        & > i {
+            font-size: 28px;
+        }
+    }
 
     // ACTIVE 
     
@@ -598,12 +622,19 @@
 
     .project {
         width: 80%;
+        margin: 20px 0 35px;
+    }
+
+    .contact__element {
+        width: 80%;
     }
 }
 
-@media (max-width: 850px) {
-    .contact__element {
-        width: 80%;
+@media (max-width: 820px) {
+    .project__paragraph {
+        & > i {
+            font-size: 45px;
+        }
     }
 }
 
@@ -618,5 +649,13 @@
 
     .icon__list {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .project__paragraph {
+        & > i {
+            font-size: 38px;
+        }
     }
 }
