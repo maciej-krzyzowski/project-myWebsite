@@ -928,7 +928,7 @@ body {
   .menu__list {
     display: none;
     position: absolute;
-    top: 110px;
+    bottom: -155px;
     right: 0;
     width: 100%;
     background-color: #EBEBEB;
@@ -1016,6 +1016,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  .header__menu {
+    display: inline-block;
+  }
   .project__paragraph > i {
     font-size: 38px;
   }

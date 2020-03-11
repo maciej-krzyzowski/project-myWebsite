@@ -549,7 +549,7 @@
     .menu__list {
         display: none;
         position: absolute;
-        top: 110px;
+        bottom: -155px;
         right: 0;
         width: 100%;
         background-color: $color-background;
@@ -681,6 +681,12 @@
 }
 
 @media (max-width: 500px) {
+
+    // HEADER 
+
+    .header__menu {
+        display: inline-block;
+    }
 
     // PROJECT 
 
