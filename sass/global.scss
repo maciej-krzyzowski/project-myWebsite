@@ -1,17 +1,16 @@
-$color-background: #EBEBEB;
-$color-hover: #204f68;
+$color-background: #dfe5e7;
+$color-hover: #242f42;
 $color-white: #fff;
 $color-black: #000;
-$color-gray: rgb(145, 160, 187);
+$color-blue: #576a8d;
 
 h1 {
     font-size: 45px;
     font-weight: bold;
 
     & > span {
-
         &:first-child {
-         font-size: 55px;
+            font-size: 55px;
         }
     }
 }
@@ -35,7 +34,7 @@ a:focus {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     color: $color-black;
     background-color: $color-background;
 }
@@ -51,17 +50,16 @@ body {
         font-size: 35px;
 
         & > span {
-
             &:first-child {
-             font-size: 45px;
+                font-size: 45px;
             }
         }
     }
-    
+
     h2 {
         font-size: 20px;
     }
-    
+
     h3 {
         font-size: 16px;
     }
@@ -76,17 +74,16 @@ body {
         font-size: 32px;
 
         & > span {
-
             &:first-child {
-             font-size: 45px;
+                font-size: 45px;
             }
         }
     }
-    
+
     h2 {
         font-size: 18px;
     }
-    
+
     h3 {
         font-size: 14px;
     }
