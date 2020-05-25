@@ -781,9 +781,13 @@ body {
 .project__btn {
   background-color: #576a8d;
   border-radius: 3px;
-  border-color: #576a8d;
+  border: none;
   padding: 10px 15px;
   margin: 15px;
+}
+
+.project__btn:hover {
+  background-color: #242f42;
 }
 
 .project__paragraph {

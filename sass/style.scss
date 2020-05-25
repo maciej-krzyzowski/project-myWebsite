@@ -351,9 +351,13 @@
 .project__btn {
     background-color: $color-blue;
     border-radius: 3px;
-    border-color: $color-blue;
+    border: none;
     padding: 10px 15px;
     margin: 15px;
+
+    &:hover {
+        background-color: $color-hover;
+    }
 }
 
 .project__paragraph {
