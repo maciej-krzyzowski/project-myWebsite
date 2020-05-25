@@ -1,1 +1,1 @@
-DEMO: https://maciej-krzyzowski.github.io/project-myWebsite/
+DEMO: https://maciejkrzyzowski.pl/
