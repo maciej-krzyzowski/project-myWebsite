@@ -1,43 +1,52 @@
-const eventListener = () => {
-    const menuLinks = document.querySelectorAll(".menu__link");
-    const footerLinks = document.querySelectorAll(".footer__link--menu");
-    const hamburger = document.querySelector(".hamburger");
+const hamburgerToggle = () => {
+    const hamburgerButton = document.querySelector(".hamburger");
     const menuList = document.querySelector(".menu__list");
+    hamburgerButton.classList.toggle("is-active");
+    menuList.classList.toggle("activeMenuList");
+};
+
+const activeLink = (link) => {
+    const activeLinks = document.querySelectorAll(".activeLink");
+    const isActiveSection = document.querySelector(".activeSection");
+    const clickedLink = link.getAttribute("href").replace("#", "");
+    const menuLinks = document.querySelectorAll("#" + clickedLink);
+    const activateSection = document.querySelector("." + clickedLink);
+
+    for (let link of activeLinks) {
+        link.classList.remove("activeLink");
+    }
+    isActiveSection.classList.remove("activeSection");
 
     for (let link of menuLinks) {
-        link.addEventListener("click", () => {
-            const activeLink = document.querySelector(".activeLink");
-            const activeSection = document.querySelector(".activeSection");
-            const clickedLink = link.getAttribute("href").replace("#", "");
-            const activateSection = document.querySelector("." + clickedLink);
+        link.classList.add("activeLink");
+    }
+    activateSection.classList.add("activeSection");
+};
 
-            activeLink.classList.remove("activeLink");
-            activeSection.classList.remove("activeSection");
-            link.classList.add("activeLink");
-            activateSection.classList.add("activeSection");
+const eventListener = () => {
+    const hamburgerButton = document.querySelector(".hamburger");
+    const navigationLinks = document.querySelectorAll(".menu__link");
+    const footerLinks = document.querySelectorAll(".footer__link--menu");
+
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerToggle();
+    });
+
+    for (let navLink of navigationLinks) {
+        navLink.addEventListener("click", () => {
+            activeLink(navLink);
 
             if (window.innerWidth <= 992) {
-                menuList.classList.remove("activeMenuList");
-                hamburger.classList.remove("is-active");
+                hamburgerToggle();
             }
         });
     }
 
-    for (let link of footerLinks) {
-        link.addEventListener("click", () => {
-            const activeSection = document.querySelector(".activeSection");
-            const clickedLink = link.getAttribute("href").replace("#", "");
-            const activateSection = document.querySelector("." + clickedLink);
-
-            activeSection.classList.remove("activeSection");
-            activateSection.classList.add("activeSection");
+    for (let footerLink of footerLinks) {
+        footerLink.addEventListener("click", () => {
+            activeLink(footerLink);
         });
     }
-
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("is-active");
-        menuList.classList.toggle("activeMenuList");
-    });
 };
 
 eventListener();
