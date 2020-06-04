@@ -21,6 +21,9 @@ const activeLink = (link) => {
         link.classList.add("active__link");
     }
     activateSection.classList.add("active__section");
+    setTimeout(function () {
+        window.scroll(0, -100);
+    }, 0);
 };
 
 const eventListener = () => {
