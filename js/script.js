@@ -2,25 +2,25 @@ const hamburgerToggle = () => {
     const hamburgerButton = document.querySelector(".hamburger");
     const menuList = document.querySelector(".menu__list");
     hamburgerButton.classList.toggle("is-active");
-    menuList.classList.toggle("activeMenuList");
+    menuList.classList.toggle("active__menu");
 };
 
 const activeLink = (link) => {
-    const activeLinks = document.querySelectorAll(".activeLink");
-    const isActiveSection = document.querySelector(".activeSection");
+    const activeLinks = document.querySelectorAll(".active__link");
+    const isActiveSection = document.querySelector(".active__section");
     const clickedLink = link.getAttribute("href").replace("#", "");
     const menuLinks = document.querySelectorAll("#" + clickedLink);
     const activateSection = document.querySelector("." + clickedLink);
 
     for (let link of activeLinks) {
-        link.classList.remove("activeLink");
+        link.classList.remove("active__link");
     }
-    isActiveSection.classList.remove("activeSection");
+    isActiveSection.classList.remove("active__section");
 
     for (let link of menuLinks) {
-        link.classList.add("activeLink");
+        link.classList.add("active__link");
     }
-    activateSection.classList.add("activeSection");
+    activateSection.classList.add("active__section");
 };
 
 const eventListener = () => {
